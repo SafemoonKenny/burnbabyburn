@@ -1,3 +1,4 @@
+
 # Importing necessary packages
 from datetime import datetime, timedelta
 
@@ -48,7 +49,7 @@ def burn_calculation(circulating=580.828875377658,target_mc=1, target_price=0.00
             break
 
 
-        # Daily Price
+        # Daily Price and Volume Estimate
         if counter <= 30*1.5: # Pre-Wallet Release
             daily_price = initial_price # USD per SM
             daily_volume = 20 # million USD
@@ -123,4 +124,6 @@ def burn_calculation(circulating=580.828875377658,target_mc=1, target_price=0.00
         print("Initial Investment:",investment)
         print("Ending Value:",int(round(investment*daily_price/average_buy,0)))
         print("Return:",round(pow(daily_price/average_buy,1/(int(current_date.strftime("%Y"))/365))-1,1)*100," %")
+        
+        
 
