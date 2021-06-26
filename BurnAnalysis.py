@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[206]:
-
-
 # Importing necessary packages
 from datetime import datetime, timedelta
 
@@ -129,42 +123,4 @@ def burn_calculation(circulating=580.828875377658,target_mc=1, target_price=0.00
         print("Initial Investment:",investment)
         print("Ending Value:",int(round(investment*daily_price/average_buy,0)))
         print("Return:",round(pow(daily_price/average_buy,1/(int(current_date.strftime("%Y"))/365))-1,1)*100," %")
-
-       
-
-
-# In[207]:
-
-
-burn_calculation(target_mc=50,target_price=0.0025)
-
-
-# In[208]:
-
-
-burn_calculation()
-
-
-# In[143]:
-
-
-0.0001/0.00000239
-
-
-# In[144]:
-
-
-1000*100
-
-
-# In[146]:
-
-
-pow(50,1/5)-1
-
-
-# In[ ]:
-
-
-0.
 
